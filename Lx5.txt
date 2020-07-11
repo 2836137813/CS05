@@ -1,0 +1,70 @@
+﻿﻿C＃企业级开发技术练习5答题卡
+
+班级：信息管理2班	
+姓名：林进玮
+学号：20190307240
+
+*注：排除答案放置在序号下方。* /
+
+（一）
+    公共类UserSys
+    {
+        公共委托void DLogin（object o，int n）;
+        DLogin _elogin;
+        公共事件DLogin ELogin
+        {
+            加
+            {_elogin + =值；}
+            去掉
+            {_elogin-=值；}
+        }
+        int n = 0;
+        公共无效的login（）
+        {
+            _elogin（this，++ n + 10000）;
+        }
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            UserSys用户=新的UserSys（）;
+            user.ELogin + =（o，n）=> Console.WriteLine（$“ {n}登录{o}成功”）;
+            用户登录（）;
+            用户登录（）;
+            用户登录（）;
+        }
+    }
+}
+（二）
+字符串str1 =“ C＃，java，python，golang，javascript，PHP，VB”;
+            字符串[] str2 = str1.Split（'，'）;
+            Array.Sort（str2，（a，b）=>字符串。比较（b.ToString（），a.ToString（）））;
+            字符串str3 = string.Join（“，”，str2）;
+            Console.WriteLine（str3）;
+（三）
+公共课程MathSys
+    {
+        公共委托void DFilter（int [] num）;
+        公共事件DFilter EFilter；
+        公共无效过滤器（int [] num）
+        {
+            EFilter（num）;
+        }
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            MathSys math =新的MathSys（）;
+            math.EFilter + = num =>
+            {
+                int []偶数= Array.FindAll（num，p => p％2 == 0）;
+                Console.WriteLine（“分布式中的偶数如下：”）;
+                foreach（偶数我也算）
+                    Console.WriteLine（i）;
+            };
+            math.filter（new [] {10，8，7，21，24}）;
+        }
+    }
+}
